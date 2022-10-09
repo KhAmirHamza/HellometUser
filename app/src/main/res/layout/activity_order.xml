@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.OrderActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/order_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/order_toolbar"
+            style="@style/Widget.MaterialComponents.Toolbar.PrimarySurface"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:title="Place Order" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/order_appbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardview_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/Widget.App.CardView.BottomRounded">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/txtv_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="Selected Pharmacy"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imgv_pharmacy_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_below="@+id/txtv_1"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/pharmacy"/>
+
+                    <LinearLayout
+                        android:id="@+id/lay_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imgv_pharmacy_image"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@+id/lay_3"
+                        android:orientation="horizontal"
+                        android:paddingLeft="2.5dp">
+
+                        <ImageView
+                            android:id="@+id/imgv_pharmacy_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_outline_store_mall_directory_24black" />
+
+                        <TextView
+                            android:id="@+id/txtv_pharmacy_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:text="Sheba Medical Pharmacy"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lay_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imgv_pharmacy_image"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="7dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingRight="2.5dp">
+
+                        <ImageView
+                            android:id="@+id/imgv_distance_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_double_arrow_24black" />
+
+                        <TextView
+                            android:id="@+id/txtv_pharmacy_distance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lay_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lay_1"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="2.5dp"
+                        android:paddingRight="2.5dp">
+
+                        <ImageView
+                            android:id="@+id/imgv_address_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_outline_location_on_24_black" />
+
+                        <TextView
+                            android:id="@+id/txtv_pharmacy_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="?attr/colorControlNormal"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:text="Dhanmondi, Dahaka, Bangladesh"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <ImageView
+                android:id="@+id/imgv_prescription"
+                android:visibility="gone"
+                android:adjustViewBounds="true"
+                android:layout_below="@+id/cardview_1"
+                android:src="@drawable/person"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardview_medicine"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgv_prescription"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/txtv_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Medicine"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recy_order_medicine"
+                        tools:listitem="@layout/iv_order_items"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtv_2" />
+
+                    <TextView
+                        android:id="@+id/txtv_total_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/recy_order_medicine"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="10dp"
+                        android:text="Total Price: 500 TK"
+                        android:textColor="#00C853"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardview_medicine"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/txtv_apply_payment_mothod"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Add Payment Method"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGrourp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtv_apply_payment_mothod">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="Cash on Delivery" />
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/edt_user_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/radioGrourp"
+                        android:hint="Delivery Address..."
+                        android:layout_margin="10dp" />
+
+                    <EditText
+                        android:id="@+id/edt_order_requirement"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/edt_user_address"
+                        android:hint="Order Requirement..."
+                        android:layout_margin="10dp" />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_order_apply"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/edt_order_requirement"
+                        android:layout_margin="10dp"
+                        android:text="Apply"
+                        android:textAllCaps="false" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

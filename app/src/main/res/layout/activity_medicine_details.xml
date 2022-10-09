@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.MedicineDetailsActivity"
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_medicine_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_medicine_details"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:titleTextColor="@color/white"
+            app:title="Medicine Details">
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ScrollView
+     android:layout_below="@id/appbar_medicine_details"
+     android:layout_above="@+id/lay_5"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content">
+
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_margin="5dp">
+         <ImageView
+             android:id="@+id/imgv_medicine"
+             android:layout_width="match_parent"
+             android:layout_height="240dp"
+             android:scaleType="fitCenter"
+             android:layout_marginTop="5dp"
+             android:src="@drawable/medicines"
+             android:layout_marginBottom="10dp"/>
+
+         <TextView
+             android:id="@+id/txtv_medicine_name"
+             android:layout_below="@+id/imgv_medicine"
+             android:layout_alignParentLeft="true"
+             android:layout_toLeftOf="@+id/txtv_medicine_price"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textSize="18sp"
+             android:text="Medicine Name"
+             android:drawableLeft="@drawable/ic_outline_name_24"
+             android:textColor="@color/black"
+             android:layout_marginRight="20dp"/>
+         <TextView
+             android:id="@+id/txtv_medicine_price"
+             android:layout_alignParentRight="true"
+             android:layout_below="@+id/imgv_medicine"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textSize="20sp"
+             android:textStyle="bold"
+             android:layout_marginRight="5dp"
+             android:textColor="@color/bg_700"/>
+         <TextView
+             android:id="@+id/txtv_medicine_brand"
+             android:layout_below="@+id/txtv_medicine_name"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textSize="12sp"
+             android:drawableLeft="@drawable/ic_outline_brand_24"
+             android:padding="2.5dp"
+             android:textColor="#001463"
+             android:layout_marginBottom="10dp"/>
+
+         <TextView
+             android:id="@+id/txtv_1"
+             android:layout_marginTop="5dp"
+             android:layout_below="@+id/txtv_medicine_brand"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="  Group: "
+             android:textSize="16sp"
+             android:drawableLeft="@drawable/ic_outline_features_24"
+             android:textColor="@color/black"/>
+         <TextView
+             android:id="@+id/txtv_medicine_features"
+             android:layout_below="@+id/txtv_1"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:textSize="14sp"
+             android:text="Square Pharma"
+             android:textColor="?attr/colorControlNormal"
+             android:layout_marginLeft="5dp"
+             android:layout_marginRight="5dp"
+             android:layout_marginBottom="15dp"/>
+         <TextView
+             android:id="@+id/txtv_2"
+             android:layout_below="@+id/txtv_medicine_features"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="  Indications: "
+             android:textSize="16sp"
+             android:drawableLeft="@drawable/ic_outline_indication_24"
+             android:textColor="@color/black"/>
+         <TextView
+             android:id="@+id/txtv_medicine_indication"
+             android:layout_below="@+id/txtv_2"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:textSize="14sp"
+             android:layout_marginLeft="5dp"
+             android:layout_marginRight="5dp"
+             android:layout_marginBottom="15dp"
+             android:textColor="?attr/colorControlNormal"/>
+         <TextView
+             android:id="@+id/txtv_3"
+             android:layout_below="@+id/txtv_medicine_indication"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="  Descriptions: "
+             android:textSize="16sp"
+             android:drawableLeft="@drawable/ic_outline_rate_review_24"
+             android:textColor="@color/black"/>
+
+         <TextView
+             android:id="@+id/txtv_medicine_description"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/txtv_3"
+             android:layout_marginLeft="5dp"
+             android:layout_marginRight="5dp"
+             android:layout_marginBottom="15dp"
+             android:textSize="14sp" />
+     </RelativeLayout>
+
+ </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/lay_5"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_to_cart"
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content"
+            android:text="Add to Cart"
+            android:textAllCaps="false"
+            android:textColor="#FF00CB"
+            android:drawableLeft="@drawable/ic_baseline_favorite_border_24"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_order_now"
+            android:layout_marginLeft="10dp"
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content"
+            android:text="Order Now"
+            android:textAllCaps="false"
+            android:drawableLeft="@drawable/ic_baseline_shopping_basket_24"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

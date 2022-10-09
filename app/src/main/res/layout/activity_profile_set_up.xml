@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".View.ProfileSetUpActivity"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/profile_appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/profile_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="Set up your profile"
+                style="@style/Widget.MaterialComponents.Toolbar.PrimarySurface"
+                />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+
+        <RelativeLayout
+            android:layout_below="@id/profile_appbar"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:layout_marginBottom="100dp"
+            android:paddingRight="30dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_choose_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose Image"
+                android:textAllCaps="false"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_below="@id/btn_choose_image"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/iv_profile_image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#8D9694"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginTop="15dp"
+                />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edt_profile_name"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/iv_profile_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name*"
+                app:startIconDrawable="@drawable/ic_outline_name_24"
+                app:endIconMode="clear_text"
+                app:errorEnabled="true"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edt_profile_email"
+                android:layout_below="@+id/edt_profile_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email*"
+                app:startIconDrawable="@drawable/ic_email_black_24dp"
+                app:endIconMode="clear_text"
+                app:errorEnabled="true"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+             <com.google.android.material.textfield.TextInputLayout
+                 android:id="@+id/edt_profile_password"
+                android:layout_below="@+id/edt_profile_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password*"
+                app:startIconDrawable="@drawable/ic_password_black_24dp"
+                app:endIconMode="password_toggle"
+                app:errorEnabled="true"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:inputType="textPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edt_profile_confirm_pass"
+                android:layout_below="@+id/edt_profile_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=" Confirm Password*"
+                app:startIconDrawable="@drawable/ic_password_black_24dp"
+                app:endIconMode="password_toggle"
+                app:errorEnabled="true"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:inputType="textPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edt_profile_phone_number"
+                android:layout_below="@+id/edt_profile_confirm_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone Number*"
+                app:startIconDrawable="@drawable/ic_call_black_24dp"
+                app:endIconMode="clear_text"
+                app:errorEnabled="true"
+                android:focusable="false"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:inputType="text|numberDecimal"
+                    android:layout_width="match_parent"
+                    android:focusable="false"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_submit_profile"
+                android:layout_below="@id/edt_profile_phone_number"
+                android:layout_marginTop="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_marginBottom="50dp"
+                />
+
+        </RelativeLayout>
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".View.Fragment.MedicineFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar_medicine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar_medicine"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                app:title=""
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                android:focusableInTouchMode="false"
+                android:gravity="center"
+                android:background="@color/white"
+                >
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:layout_marginRight="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:id="@+id/edt_medicine_search"
+                            android:layout_alignParentLeft="true"
+                            android:layout_toLeftOf="@id/material_button_Upload_prescription"
+                            android:hint="Search Medicine..."
+                            android:cursorVisible="false"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="5dp"
+                            android:textSize="14sp"
+                            android:layout_gravity="center_vertical"
+                            android:drawableLeft="@android:drawable/ic_menu_search"
+                            android:background="@null"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/material_button_Upload_prescription"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:text="Prescription\nUpload"
+                            android:textSize="10sp"
+                            android:textColor="#00A6FF"
+                            android:textAllCaps="false"
+                            android:textAlignment="textStart"
+                            android:drawableLeft="@drawable/prescription"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_height="wrap_content"
+                            android:gravity="start" />
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+          <!--  <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar_medicine"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:title="Medicine"
+                app:titleTextColor="@color/white"/>
+-->
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recy_medicine"
+            android:layout_marginTop="2.5dp"
+            tools:listitem="@layout/iv_medicine"
+            android:layout_below="@id/appbar_medicine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

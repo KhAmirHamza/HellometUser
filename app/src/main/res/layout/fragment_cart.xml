@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".View.Fragment.CartFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/cart_appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/cart_toolbar"
+                style="@style/Widget.MaterialComponents.Toolbar.PrimarySurface"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:titleTextColor="@color/text_color"
+                app:title="Cart" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recy_cart"
+            android:layout_below="@+id/btn_order_all"
+            tools:listitem="@layout/iv_order_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/cart_appbar"
+            android:id="@+id/btn_order_all"
+            android:text="Order All Medicines"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

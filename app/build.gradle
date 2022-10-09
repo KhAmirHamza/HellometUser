@@ -1,0 +1,93 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+    id 'com.google.firebase.crashlytics'
+}
+
+android {
+   /* signingConfigs {
+        release {
+            storeFile file('C:\\Users\\User\\Desktop\\HelloMet APk\'s\\User_App.jks')
+            storePassword 'Arobi@r64aHm'
+            keyPassword 'Arobi@r64aHm'
+            keyAlias 'key0'
+        }
+    }*/
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.hellomet.user"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 12
+        versionName "1.1.1.2"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        //signingConfig signingConfigs.release
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            //debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+   // implementation 'com.google.firebase:firebase-crashlytics:17.4.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.libraries.places:places:2.4.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    // define a BOM and its version
+    implementation(platform("com.squareup.okhttp3:okhttp-bom:4.9.0"))
+
+    // define any required OkHttp artifacts without version
+    implementation("com.squareup.okhttp3:okhttp")
+    implementation("com.squareup.okhttp3:logging-interceptor")
+
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
+
+    def room_version = "2.2.6"
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+
+    implementation 'com.github.GoodieBag:Pinview:v1.4'
+
+    implementation platform('com.google.firebase:firebase-bom:28.4.2')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-firestore'
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'androidx.browser:browser:1.3.0'
+    implementation 'com.google.android.gms:play-services-safetynet:17.0.1'
+    //One Signal Push Notification...
+    implementation 'com.onesignal:OneSignal:[4.0.0, 4.99.99]'
+
+
+    implementation 'com.hbb20:ccp:2.4.7'
+
+}

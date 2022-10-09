@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".View.Fragment.OrderFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/order_appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/order_toolbar"
+                style="@style/Widget.MaterialComponents.Toolbar.PrimarySurface"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:title="Order" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recy_order"
+            tools:listitem="@layout/iv_order_list"
+            android:layout_below="@+id/order_appbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,25 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.GoodieBag:Pinview:v1.4@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9445490d251011a91e015776162b2f53/jetified-Pinview-v1.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9445490d251011a91e015776162b2f53/jetified-Pinview-v1.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9445490d251011a91e015776162b2f53/jetified-Pinview-v1.4/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2768befdbda1444852335e77cb544078/jetified-Pinview-v1.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2768befdbda1444852335e77cb544078/jetified-Pinview-v1.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2768befdbda1444852335e77cb544078/jetified-Pinview-v1.4/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/342a1d584ccb848413960dedc49ba0a0/jetified-Pinview-v1.4/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/342a1d584ccb848413960dedc49ba0a0/jetified-Pinview-v1.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/342a1d584ccb848413960dedc49ba0a0/jetified-Pinview-v1.4/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/165dc1d7bb01ab0c4944410986c69319/jetified-Pinview-v1.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/165dc1d7bb01ab0c4944410986c69319/jetified-Pinview-v1.4/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/165dc1d7bb01ab0c4944410986c69319/jetified-Pinview-v1.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6fe2704ac8215136b0f3996223eda2db/jetified-Pinview-v1.4/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6fe2704ac8215136b0f3996223eda2db/jetified-Pinview-v1.4/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6fe2704ac8215136b0f3996223eda2db/jetified-Pinview-v1.4/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.GoodieBag/Pinview/v1.4/ea0c7126b26a6ab67ee0c3030fd56f78ccf097c8/Pinview-v1.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
